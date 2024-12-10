@@ -2,6 +2,12 @@ const http = require('node:http');
 const path = require('node:path')
 const readline = require("node:readline/promises");
 const fs = require('node:fs/promises')
+const os = require('node:os')
+const emitter = require('node:events')
+const events = require("node:events");
+const fsCB = require('node:fs')
+
+
 
 
 const foo = async () => {
@@ -69,7 +75,50 @@ const foo = async () => {
     // await fs.rename('test.json', 'helpers/test2.json')
     //
     // await fs.copyFile('test.txt', 'test2.txt')
+    // const dirs = ['www', 'rrr', 'ttt', 'vvv']
+    // for (const dir of dirs) {
+    //     await fs.mkdir(path.join('ttttt', dir))
+    // }
 
-    await fs.mkdir(path.join(process.cwd(), 'asd'))
+    //os
+    // console.log(os.arch());
+    // console.log(os.cpus());
+    // console.log(os.freemem() / 1024 / 1024 / 1024);
+    // console.log(os.totalmem() / 1024 / 1024 / 1024);
+    // console.log(os.homedir());
+    // console.log(os.hostname());
+    // console.log(os.platform());
+    // console.log(os.release());
+    // console.log(os.type());
+    // console.log(os.uptime());
+    // console.log(os.userInfo());
+    // console.log(os.version());
+    // console.log(os.networkInterfaces());
+
+
+    //events
+
+    // const em = new emitter.EventEmitter()
+    // em.on('first_visit', (name, age)=>{
+    //     //send email
+    //     console.log(`First visit [email] to ${name} ${age} `)
+    // });
+    // em.on('first_visit', ()=>{
+    //     //send sms
+    //     console.log('First visit [sms]')
+    // });
+    // em.emit('first_visit', 'Anastasiia', 21)
+    //
+    // em.once('second_visit', () => {
+    //     console.log('second')
+    // })
+    // em.emit('second_visit')
+
+
+    //stream
+    const readStream = fsCB
+
+
+
 }
 void foo();
